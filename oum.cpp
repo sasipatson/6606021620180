@@ -1,33 +1,26 @@
 #include <iostream>
 using namespace std;
-int main ()
+int main()
 {
-	int first,second,third,midterm,final;
-	float QTotal,T;
-	string score;
-	cout << "==========QUIZZES==========\n" ;
-	cout << "Enter first quizz (10):" ;
-	cin >> first;
-	cout << "Enter second quizz (10):" ;
-	cin >> second;
-	cout << "Enter third quizz (10):" ;
-	cin >> third;
-	cout << "==========MIDTERM==========\n" ;
-	cout << "Enter midterm (40):" ;
-	cin >> midterm ;
-	cout << "==========FINAL==========\n" ;
-	cout << "Enter final (50):" ;
-	cin >> final ;
-	cout << "Quizz Total : " ;
-	cin >> QTotal ;
-	cout << "midterm : " ;
-	cin >> midterm ;
-	cout << "Final :" ;
-	cin >> final ;
-	cout << "Total :" << final+QTotal+midterm <<endl;
-	T = final+QTotal+midterm ;
-	cout << "Your score is" << ((T>=50)? "PASS ":"FAIL") <<endl;
+	int age , height ,weight ;
+	char  sex ;
+	float BMI ;
+	cout << "Enter age : " ;
+	cin >> age ;
+	cout << "Enter weight : " ;
+	cin >> weight ;
+	cout << "Enter height : " ;
+	cin >> height ;
+	cout << "Enter sex : " ;
+	cin >> sex ;
+	BMI = weight / (height/100 * height) ;
+	cout << "BMI = " << BMI <<endl;
+	if(BMI <=18.5) cout << "underweight\n" ;
+	else if(BMI <= 25) cout <<"normal\n" ;
+	else if(BMI <=35) cout <<"overweight\n" ;
+	else if(BMI <=40) cout <<"obesity\n" ;
 
-	system ("pause") ;
-	return (0);
+return (0);
 }
+
+	
