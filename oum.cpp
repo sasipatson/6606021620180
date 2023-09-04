@@ -1,78 +1,45 @@
 #include <iostream>
 using namespace std;
+void Calcircle();
 int main()
-{
-	char menu;
-	int n;
-	cout << "select Menu" <<endl;
-	cout << "********************" <<endl;
-	cout << "1.Align Left" <<endl;
-	cout << "2.Align Right" <<endl;
-	cout << "3.Center" <<endl;
-	cout << "4.Exit" <<endl;
-	cout << "********************" <<endl;
+{	char Ch;
 
 	do{
-			cout << "Select Menu No : ";
-			cin >> menu;
-			if (menu == '1')
-			{
-				cout << "Input number of line : ";
-				cin >> n;
-				for (int i = 1 ; i <= n ; i++)
-			{
-				for(int k = n ; k >= i ; k--)
-					cout << " " ;
-				for(int j = 1 ; j <= i ; j++ )
-				{
-					cout << "*";
-				}
-				cout <<endl;
-			}
-		
-		}
-
-		else if (menu == '2')
-		{
-			cout << "Input number of line : " ;
-			cin >> n ;
-
-			for (int i = 1 ; i <= n ; i++)
-			{
-				for (int j = 1 ; j <= i ; j++)
-				{
-					cout << "*" ;
-				}
-				cout <<endl;
-			}
-		
-		}
-
-		else if (menu == '3'){
-			cout << "Input number of line : " ;
-			cin >> n ;
-			for (int i = 1 ; i <= n; i++){
-				for (int j = 1 ; j <= n - i ; j++ ){
-					cout << " ";
-
-				}
-				for (int j = 1 ; j <= 2 * i - 1 ; j++){
-					cout << "*";
-				}
-				cout <<endl;
-			}
-		}
-
-		else cout << "Invalid Menu!! Please choose again" <<endl;
-	
-	
-	} while(menu != '4');
-
-
-
-	
-	
+		cout <<"Program Calculate of Circle."<<endl;
+		cout <<"************************************"<<endl;
+		cout <<"1.Circle"<<endl;
+		cout <<"2. Rectangle"<<endl;
+		cout <<"3.Exit :";
+		cout <<"Choose Menu :";
+		cin >>Ch;
+		if(Ch == '1')Calcircle();
+			else if(Ch == '2')cout <<"Rectangle"<<endl;
+				else if(Ch == '3')cout <<"Exit"<<endl;
+					else cout <<"Wrong Menu"<<endl;
+	}while(Ch != '3');
 	system("pause");
 	return(0);
 }
-
+void Calcircle()
+{
+	float radius,area,circumference;
+	cout <<"Input radius :";
+	cin >>radius;
+	area = 3.14f*radius*radius;
+	circumference = 2*3.14f*radius;;
+	cout <<endl;
+	cout <<"Area of circle :"<<area<<endl;
+	cout <<"circumference of circle :"<<circumference<<endl;
+	cout <<"Diameter of circle :"<<(2*radius)<<endl;
+}
+void Rectangle()
+{
+	int wi,lo,area;
+	cout <<"Input Width :";
+	cin >>wi;
+	cout <<"Input long :";
+	cin >>lo;
+	area = wi*lo;
+	cout <<"Area of Rectangle :"<<area<<endl;
+	cout <<endl;
+}
